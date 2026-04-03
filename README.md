@@ -1,6 +1,6 @@
 1. Overview
 
-Built a virtual Active Directory lab to simulate real-world attack scenarios.
+Build a virtual Active Directory lab to simulate real-world attack scenarios.
 
 2. Environment
 
