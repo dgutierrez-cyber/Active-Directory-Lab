@@ -13,11 +13,14 @@ VirtualBox (Host-only network)    <img width="1884" height="706" alt="VB Host On
 
 
 4. Objectives:
-First, the domain environment was scanned and user accounts were enumerated to identify potential targets. A simple Brute Force Attack was then executed to gain access to valid accounts, demonstrating domain compromise techniques.
-
 Simulate weak credential attack
 Perform a Brute Force attack
 Demonstrate domain compromise techniques
+
+
+First, the domain environment was scanned and user accounts were enumerated to identify potential targets. A simple Brute Force Attack was then executed to gain access to valid accounts, demonstrating domain compromise techniques.
+
+
 <img width="937" height="506" alt="Weak Credential-BruteForce" src="https://github.com/user-attachments/assets/70c89196-43c4-4e70-ba3d-9f73079175c8" />
 
 
