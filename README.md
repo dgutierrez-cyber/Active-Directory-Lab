@@ -17,6 +17,9 @@ VirtualBox (Host-only network)    <img width="1884" height="706" alt="VB Host On
 Simulate weak credential attack
 Perform password spraying
 Demonstrate domain compromise techniques
+<img width="937" height="506" alt="Weak Credential-BruteForce" src="https://github.com/user-attachments/assets/70c89196-43c4-4e70-ba3d-9f73079175c8" />
+
+
 
 5. Key Findings
 Weak passwords allow immediate domain access
