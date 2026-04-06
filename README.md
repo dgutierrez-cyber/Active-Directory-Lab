@@ -2,11 +2,10 @@
   <h2><strong>Overview</strong></h2> 
 </div>
 
-
-This project simulates a real-world Active Directory (AD) environment and demonstrates how weak credentials can be exploited to gain unauthorized access to a domain.
-
+<div>
+    This project simulates a real-world Active Directory (AD) environment and demonstrates how weak credentials can be exploited to gain unauthorized access to a domain.
 The lab was built using a Windows Server 2022 Domain Controller and a Kali Linux attacker machine. The objective was to replicate a common initial access technique used in penetration testing and real-world cyber attacks.
-
+</div>
 
 
 <div align="center">
@@ -81,11 +80,13 @@ Employees, standard user accounts (e.g., jdoe, asmith), privileged account (admi
 <h2><strong>Attack: Credential-Based Initial Access</strong></h2>
 </div>
 
-A network connectivity test was first performed using ICMP (ping) to verify that the target system (192.168.56.10) was reachable from the attacker machine. This step ensures that the host is online and accessible before attempting authentication-based attacks.
+<div> A network connectivity test was first performed using ICMP (ping) to verify that the target system (192.168.56.10) was reachable from the attacker machine. This step ensures that the host is online and accessible before attempting authentication-based attacks.
 
 Following successful connectivity verification, a credential validation attack was performed using NetExec to test authentication over the SMB protocol.
 
 netexec smb 192.168.56.10 -u D1Test -p 'Password123'
+</div>
+
 
 <img width="937" height="506" alt="Weak Credential-BruteForce" src="https://github.com/user-attachments/assets/70c89196-43c4-4e70-ba3d-9f73079175c8" />
 
