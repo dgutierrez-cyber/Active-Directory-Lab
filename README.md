@@ -103,12 +103,11 @@ This confirms that the domain is vulnerable to credential-based attacks.
 <h2><strong>Post-Exploitation Potential</strong></h2>
 </div>
 
-With valid domain credentials, an attacker could:
-
-Enumerate domain users and groups
-Access shared resources over SMB
-Attempt privilege escalation
-Perform lateral movement across systems
+With valid domain credentials, an attacker could
+* Enumerate domain users and groups
+* Access shared resources over SMB
+* Attempt privilege escalation
+* Perform lateral movement across systems
 
 This highlights the risk associated with weak credential policies in Active Directory environments.
 
@@ -117,20 +116,19 @@ This highlights the risk associated with weak credential policies in Active Dire
 <h2><strong>Security Impact</strong></h2>
 </div>
 
-Weak passwords can lead to immediate unauthorized access
-Compromised accounts can serve as an entry point for further attacks
-Lack of proper account controls increases overall domain risk
+* Weak passwords can lead to immediate unauthorized access 
+* Compromised accounts can serve as an entry point for further attacks
+* Lack of proper account controls increases overall domain risk
 
 
 <div align="center">
 <h2><strong>Mitigation Strategies</strong></h2>
 </div>
 
-The implementation of account policies such as password requirements, 2FA and MFA is necessary to stop attackers from brute force or password spraying attacks. 
-Enforce strong password policies
-Implement account lockout thresholds
-Monitor authentication attempts and logs
-Use Multi-Factor Authentication (MFA) where possible
+* Enforce strong password policies
+* Implement account lockout thresholds
+* Monitor authentication attempts and logs
+* Use Multi-Factor Authentication (MFA) where possible
 
 
 
