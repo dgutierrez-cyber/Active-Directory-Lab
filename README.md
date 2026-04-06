@@ -13,30 +13,41 @@ The lab was built using a Windows Server 2022 Domain Controller and a Kali Linux
   <h2><strong>Lab Environment</strong></h2>
 </div>
 
-Domain Controller: Windows Server 2022 - 8gb RAM 4CPU  
+<div align="center">Domain Controller
+</div>
+Windows Server 2022 - 8gb RAM 4CPU  
 
 <img width="879" height="775" alt="Windows Server Environment " src="https://github.com/user-attachments/assets/1cc6e15f-6f58-47cb-a2f8-5889d8e651e2" />
 
 
 
-Attacker Machine: Kali Linux - 4GB RAM, 2CPU  
+<div align="center">Attacker Machine
+</div>
+
+Kali Linux - 4GB RAM, 2CPU  
 
 <img width="836" height="715" alt="Kali Environment" src="https://github.com/user-attachments/assets/d9cc9c0a-82df-4fe7-8b8b-e705751c5f6b" />
 
-Virtualization: VirtualBox
-Network Configuration: NAT + Host-Only Adapter
+<div align="center">VirtualBoxNetwork Configuration 
+</div>
+
+NAT + Host-Only Adapter
 
 <img width="1117" height="968" alt="VB Network Host Only Adapter" src="https://github.com/user-attachments/assets/579d6afb-3e82-4a40-87e5-0785408d8460" />
 
 
-Network Configuration:
+<div align="center">Network Configuration
+</div>
+
 Domain Controller IP: 192.168.56.10
 
 <img width="752" height="362" alt="Windows Server 2022 IPconfig" src="https://github.com/user-attachments/assets/26343198-09b9-48fe-9674-a2460bb9cc48" />
 
+
 Attacker Machine IP: 192.168.56.30
 
 <img width="892" height="313" alt="Kali IP Address" src="https://github.com/user-attachments/assets/5079235a-7085-4080-bba7-d5eab31417d1" />
+
 
 Domain Name: lab.local
 
