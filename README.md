@@ -1,5 +1,5 @@
-<div align="center">#
-  ## Overview
+<div align="center">
+  <h2><strong>Overview</strong></h2> 
 </div>
 
 
@@ -10,7 +10,7 @@ The lab was built using a Windows Server 2022 Domain Controller and a Kali Linux
 
 
 <div align="center">
-  Lab Environment:
+  <h2><strong>Lab Environment:</strong></h2>
 </div>
 
 Domain Controller: Windows Server 2022
@@ -25,13 +25,13 @@ Attacker Machine IP: 192.168.56.30
 Domain Name: lab.local
 
  <div align="center">
-Active Directory Configuration:
+<h2><strong>Active Directory Configuration:</strong></h2>
  </div>
 
 The domain environment was structured to reflect a simplified enterprise setup.
 
  <div align="center">
-Organizational Units (OUs):
+<h2><strong>Organizational Units (OUs):</strong></h2>Organizational Units (OUs):
 </div>
 
 Employees
@@ -54,7 +54,7 @@ VirtualBox (Host-only network)    <img width="1884" height="706" alt="VB Host On
 
 
 <div align="center">
-Attack: Credential-Based Initial Access
+<h2><strong>Attack: Credential-Based Initial Access</strong></h2>
 </div>
 
 A credential validation attack was performed using NetExec to test authentication over the SMB protocol.
@@ -63,7 +63,7 @@ netexec smb 192.168.56.10 -u D1Test -p 'Password123'
 
 
 <div align="center">
-Attack Rationale:
+<h2><strong>Attack Rationale:</strong></h2>
 </div>
 
 SMB is a commonly exposed service in Windows environments and is frequently targeted by attackers for authentication-based attacks.
@@ -72,7 +72,7 @@ Weak or reused passwords significantly increase the likelihood of successful com
 
 
 <div align="center">
-Results:
+<h2><strong>Results:</strong></h2>
 </div>
 
 Authentication was successfully achieved using weak credentials, demonstrating how easily a misconfigured account can be exploited.
@@ -81,7 +81,7 @@ This confirms that the domain is vulnerable to credential-based attacks.
 <img width="937" height="506" alt="Weak Credential-BruteForce" src="https://github.com/user-attachments/assets/70c89196-43c4-4e70-ba3d-9f73079175c8" />
 
 <div align="center">
-Post-Exploitation Potential:
+<h2><strong>Post-Exploitation Potential:</strong></h2>
 </div>
 
 With valid domain credentials, an attacker could:
@@ -95,7 +95,7 @@ This highlights the risk associated with weak credential policies in Active Dire
 
 
 <div align="center">
-Security Impact:
+<h2><strong>Security Impact:</strong></h2>
 </div>
 
 Weak passwords can lead to immediate unauthorized access
@@ -104,7 +104,7 @@ Lack of proper account controls increases overall domain risk
 
 
 <div align="center">
-Mitigation Strategies:
+<h2><strong>Mitigation Strategies:</strong></h2>
 </div>
 
 The implementation of account policies such as password requirements, 2FA and MFA is necessary to stop attackers from brute force or password spraying attacks. 
