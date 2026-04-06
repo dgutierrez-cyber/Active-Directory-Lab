@@ -1,5 +1,5 @@
 <div align="center">
-  <h2><strong>Overview</strong></h2> 
+  <h2>Overview</h2> 
 </div>
 
 <div>
@@ -69,6 +69,8 @@ The domain environment was structured to reflect a simplified enterprise setup.
 Administration
 
 <img width="755" height="289" alt="Admin Alice" src="https://github.com/user-attachments/assets/59c9dedf-7254-47af-b7fc-d9c0703d4125" />
+
+
 
 Employees, standard user accounts (e.g., jdoe, asmith), privileged account (admin2), misconfigured account (D1Test) with weak credentials. This misconfiguration was intentionally introduced to simulate a common enterprise security weakness.
 
