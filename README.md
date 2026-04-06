@@ -10,60 +10,77 @@ The lab was built using a Windows Server 2022 Domain Controller and a Kali Linux
 
 
 <div align="center">
-  <h2><strong>Lab Environment:</strong></h2>
+  <h2><strong>Lab Environment</strong></h2>
 </div>
 
-Domain Controller: Windows Server 2022
-Attacker Machine: Kali Linux
+Domain Controller: Windows Server 2022 - 8gb RAM 4CPU  
+
+<img width="879" height="775" alt="Windows Server Environment " src="https://github.com/user-attachments/assets/1cc6e15f-6f58-47cb-a2f8-5889d8e651e2" />
+
+
+
+Attacker Machine: Kali Linux - 4GB RAM, 2CPU  
+
+<img width="836" height="715" alt="Kali Environment" src="https://github.com/user-attachments/assets/d9cc9c0a-82df-4fe7-8b8b-e705751c5f6b" />
+
 Virtualization: VirtualBox
 Network Configuration: NAT + Host-Only Adapter
+
+<img width="1117" height="968" alt="VB Network Host Only Adapter" src="https://github.com/user-attachments/assets/579d6afb-3e82-4a40-87e5-0785408d8460" />
 
 
 Network Configuration:
 Domain Controller IP: 192.168.56.10
+
+<img width="752" height="362" alt="Windows Server 2022 IPconfig" src="https://github.com/user-attachments/assets/26343198-09b9-48fe-9674-a2460bb9cc48" />
+
 Attacker Machine IP: 192.168.56.30
+
+<img width="892" height="313" alt="Kali IP Address" src="https://github.com/user-attachments/assets/5079235a-7085-4080-bba7-d5eab31417d1" />
+
 Domain Name: lab.local
 
+<img width="751" height="320" alt="AD Domain" src="https://github.com/user-attachments/assets/60c7a229-dc2a-44c7-979d-43af446b2814" />
+
+
  <div align="center">
-<h2><strong>Active Directory Configuration:</strong></h2>
+<h2><strong>Active Directory Configuration</strong></h2>
  </div>
 
 The domain environment was structured to reflect a simplified enterprise setup.
 
+<img width="943" height="689" alt="Server Manager Dashboard" src="https://github.com/user-attachments/assets/e55b9268-a281-4706-9542-1169f4a84fc3" />
+
+
  <div align="center">
-<h2><strong>Organizational Units (OUs):</strong></h2>Organizational Units (OUs):
+<h2><strong>Organizational Units (OUs)</strong></h2>
 </div>
 
-Employees
-IT Admins
-User Accounts:
-Standard user accounts (e.g., jdoe, asmith)
-Privileged account (admin1)
-Misconfigured account (D1Test) with weak credentials
+Administration
 
-This misconfiguration was intentionally introduced to simulate a common enterprise security weakness.
+<img width="755" height="289" alt="Admin Alice" src="https://github.com/user-attachments/assets/59c9dedf-7254-47af-b7fc-d9c0703d4125" />
 
+Employees, standard user accounts (e.g., jdoe, asmith), privileged account (admin2), misconfigured account (D1Test) with weak credentials. This misconfiguration was intentionally introduced to simulate a common enterprise security weakness.
 
-Windows Server 2022 (Domain Controller) - 8gb RAM 4CPU  <img width="879" height="775" alt="Windows Server Environment " src="https://github.com/user-attachments/assets/1cc6e15f-6f58-47cb-a2f8-5889d8e651e2" />
+<img width="752" height="291" alt="Employees" src="https://github.com/user-attachments/assets/d9a0786c-07b7-4b00-8675-4e553e2f0d01" />
 
-
-Kali Linux (Attacker) - 4GB RAM, 2CPU  <img width="836" height="715" alt="Kali Environment" src="https://github.com/user-attachments/assets/d9cc9c0a-82df-4fe7-8b8b-e705751c5f6b" />
-
-
-VirtualBox (Host-only network)    <img width="1884" height="706" alt="VB Host Only Network" src="https://github.com/user-attachments/assets/ef01b670-ec6f-4a58-ad47-fbfcb37361a8" />
 
 
 <div align="center">
 <h2><strong>Attack: Credential-Based Initial Access</strong></h2>
 </div>
 
-A credential validation attack was performed using NetExec to test authentication over the SMB protocol.
+A network connectivity test was first performed using ICMP (ping) to verify that the target system (192.168.56.10) was reachable from the attacker machine. This step ensures that the host is online and accessible before attempting authentication-based attacks.
+
+Following successful connectivity verification, a credential validation attack was performed using NetExec to test authentication over the SMB protocol.
 
 netexec smb 192.168.56.10 -u D1Test -p 'Password123'
 
+<img width="937" height="506" alt="Weak Credential-BruteForce" src="https://github.com/user-attachments/assets/70c89196-43c4-4e70-ba3d-9f73079175c8" />
+
 
 <div align="center">
-<h2><strong>Attack Rationale:</strong></h2>
+<h2><strong>Attack Rationale</strong></h2>
 </div>
 
 SMB is a commonly exposed service in Windows environments and is frequently targeted by attackers for authentication-based attacks.
@@ -72,16 +89,18 @@ Weak or reused passwords significantly increase the likelihood of successful com
 
 
 <div align="center">
-<h2><strong>Results:</strong></h2>
+<h2><strong>Results</strong></h2>
 </div>
 
 Authentication was successfully achieved using weak credentials, demonstrating how easily a misconfigured account can be exploited.
 
 This confirms that the domain is vulnerable to credential-based attacks.
-<img width="937" height="506" alt="Weak Credential-BruteForce" src="https://github.com/user-attachments/assets/70c89196-43c4-4e70-ba3d-9f73079175c8" />
+
+<img width="937" height="147" alt="Brute Force Success" src="https://github.com/user-attachments/assets/dc4146f9-873d-4285-8fcc-391154e770b6" />
+
 
 <div align="center">
-<h2><strong>Post-Exploitation Potential:</strong></h2>
+<h2><strong>Post-Exploitation Potential</strong></h2>
 </div>
 
 With valid domain credentials, an attacker could:
@@ -95,7 +114,7 @@ This highlights the risk associated with weak credential policies in Active Dire
 
 
 <div align="center">
-<h2><strong>Security Impact:</strong></h2>
+<h2><strong>Security Impact</strong></h2>
 </div>
 
 Weak passwords can lead to immediate unauthorized access
@@ -104,7 +123,7 @@ Lack of proper account controls increases overall domain risk
 
 
 <div align="center">
-<h2><strong>Mitigation Strategies:</strong></h2>
+<h2><strong>Mitigation Strategies</strong></h2>
 </div>
 
 The implementation of account policies such as password requirements, 2FA and MFA is necessary to stop attackers from brute force or password spraying attacks. 
